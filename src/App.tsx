@@ -38,7 +38,7 @@ function App() {
       <div className="container mx-auto mt-5">
         <div className='block'>
           <Select value={profession} onChange={e => setProfession(e.target.value)}>
-            <option value="">Selecione</option>
+            <option value="">Selecione uma profissão para filtrar</option>
             {professions.map(profession => <option key={profession.key} value={profession.key}>{profession.name}</option>)}
           </Select>
         </div>
