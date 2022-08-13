@@ -48,6 +48,10 @@ function App() {
           </ul>
         </div>
       </div>
+
+      <div className="container mx-auto mt-10 text-white text-center">
+        Feito com 💗 para Heroes of Valhalla
+      </div>
     </>
   );
 }
