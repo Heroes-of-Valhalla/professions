@@ -28,7 +28,7 @@ function App() {
       .then(r => setProfessions(r))
   }, [])
 
-  const filteredDatabase = players.filter(database => database.professions.includes(profession))
+  const filteredDatabase = profession && profession != "" ? players.filter(database => database.professions.includes(profession)) : players
 
   return (
     <>
@@ -38,6 +38,7 @@ function App() {
       <div className="container mx-auto mt-5">
         <div className='block'>
           <Select value={profession} onChange={e => setProfession(e.target.value)}>
+            <option value="">Selecione</option>
             {professions.map(profession => <option key={profession.key} value={profession.key}>{profession.name}</option>)}
           </Select>
         </div>
